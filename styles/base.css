@@ -5,6 +5,19 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+    --font-color :#000000;
+    --bg-color: #FFFFFF;
+}
+.darkMode{
+    --font-color :#FFFFFF;
+    --bg-color: #000000;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
 header{
     background-color:#0F1035;
     display: flex;
@@ -28,6 +41,9 @@ header span{
 
 nav{
     text-align: center;
+}
+nav ul{
+    display: none;
 }
 
 nav li{
@@ -67,6 +83,7 @@ h2{
 
 li{
     list-style:none;
+    color: var(--font-color);
 }
 
 footer{
@@ -74,4 +91,36 @@ footer{
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+svg{
+    width: 40px;
+    color: #ffffff;
+}
+
+#menu_btn-container{
+    height: 40px;
+    background-color: #7FC7D9;
+    font-size: 30px; 
+    color: white; 
+}
+
+#menu_btn-container::before{  
+   content:'\2630' ;
+}
+
+#menu_btn-container.open::before{  
+    content:'x' ;
+ }
+
+.open{
+    display: block;
+}
+
+#darkmode_btn{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 24px;
+    height: 24px;
 }
